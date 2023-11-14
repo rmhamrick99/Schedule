@@ -1,0 +1,71 @@
+<div class="component-page">
+  <div class="form-container">
+    <h2>{{ mode }} New Event</h2>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <br />
+      <label for="eventTitle">Event Title</label><br />
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          id="eventTitle"
+          name="eventTitle"
+          [(ngModel)]="eventTitle"
+          required
+        />
+      </mat-form-field>
+      <br />
+      <label for="eventDate">Event Date</label><br />
+      <mat-form-field>
+        <input
+          matInput
+          type="date"
+          id="eventDate"
+          name="eventDate"
+          [(ngModel)]="eventDate"
+          required
+        />
+      </mat-form-field>
+      <br />
+      <label for="eventLength">Event Length</label><br />
+      <mat-form-field>
+        <mat-select
+          matInput
+          id="eventLength"
+          name="eventLength"
+          [(ngModel)]="eventLength"
+          required
+        >
+          <mat-option value="15">15 minutes</mat-option>
+          <mat-option value="30">30 minutes</mat-option>
+          <mat-option value="60">1 hour</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <label for="eventTime">Event Time</label><br />
+      <mat-form-field>
+        <input
+          matInput
+          id="eventTime"
+          name="eventTime"
+          [(ngModel)]="eventTime"
+          required
+        />
+      </mat-form-field>
+      <br />
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <h1>{{ viewDate | date : "MMMM yyyy" }}</h1>
+    </div>
+    <mwl-calendar-month-view
+      [viewDate]="viewDate"
+      [events]="events"
+      (click)="handleCalendarClick($event)"
+    >
+    </mwl-calendar-month-view>
+  </div>
+</div>
+f

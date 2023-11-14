@@ -1,0 +1,35 @@
+.component-page {
+  display: flex;
+  height: 100vh; /* Adjust this value based on your design */
+}
+
+.form-container {
+  flex: 0 0 30%;
+  padding: 100px;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+.mat-form-field {
+  width: 100%; /* Set the width of the form field to 100% */
+}
+
+/* Increase the font size of the form fields */
+.mat-input-element {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* If you want to increase the height of the form fields */
+.mat-form-field {
+  height: 60px; /* Adjust the height as needed */
+}
+.calendar-container {
+  flex: 0 0 70%;
+  margin-left: 20px; /* Add margin for spacing between calendar and form */
+}
+
+/* Style the calendar header */
+.calendar-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px; /* Adjust the font size as needed */
+}

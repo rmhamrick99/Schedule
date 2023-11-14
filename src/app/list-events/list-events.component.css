@@ -1,0 +1,43 @@
+/* CSS for the list */
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for the event details */
+.event-detail {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* CSS for the buttons */
+button {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #efefef;
+}
+
+/* Specific styles for the DELETE button */
+button[color="warn"] {
+  background-color: #ba6f6f;
+  color: #fff;
+}
+
+/* Specific styles for the UPDATE button */
+button[color="accent"] {
+  background-color: #6a8ead;
+  color: #fff;
+}

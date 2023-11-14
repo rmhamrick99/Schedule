@@ -1,0 +1,22 @@
+<h2>All Currently Scheduled Events</h2>
+<div>
+  <ul *ngFor="let event of events; let i = index" class="event-list">
+    <li class="event-item">
+      <button mat-button color="warn" (click)="onDelete(event._id)">
+        DELETE
+      </button>
+
+      <button
+        mat-button
+        color="accent"
+        [routerLink]="['/editEvent', event._id]"
+      >
+        UPDATE</button
+      ><br /><br />
+      <span class="event-detail">{{ event.eventTitle }}</span>
+      <span class="event-detail">{{ event.eventDate }}</span>
+      <span class="event-detail">{{ event.eventLength }} Minutes</span>
+      <span class="event-detail">{{ event.eventTime }}</span>
+    </li>
+  </ul>
+</div>
